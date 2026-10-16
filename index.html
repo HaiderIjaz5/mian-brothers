@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mian Brothers - Learn to Create Viral AI Videos</title>
+  <meta name="description"
+    content="Mian Brothers teach you how to create viral AI videos. Get the $29 complete masterclass or the $7 AI video prompt pack with a free 30-second prompt tool.">
+  <meta property="og:title" content="Mian Brothers - Viral AI Video Creators">
+  <meta property="og:description"
+    content="Learn the exact prompts and workflow behind our viral AI videos. 280K+ followers and counting.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <style>
+    :root {
+      --bg: #0d0a1a;
+      --bg2: #141026;
+      --card: #1a1430;
+      --purple: #8b5cf6;
+      --purple2: #a78bfa;
+      --pink: #ec4899;
+      --text: #f1eefc;
+      --muted: #b7aecf;
+      --line: #2c2450;
+      --green: #22c55e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(13, 10, 26, .92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line)
+    }
+
+    nav .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 1px
+    }
+
+    .logo .mb {
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 22px;
+      font-size: .95rem;
+      color: var(--muted)
+    }
+
+    .navlinks a:hover {
+      color: #fff
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 26px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: .95rem;
+      transition: .2s;
+      border: none;
+      cursor: pointer
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      color: #fff
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(139, 92, 246, .4)
+    }
+
+    .btn-ghost {
+      border: 1px solid var(--purple);
+      color: var(--purple2)
+    }
+
+    .btn-ghost:hover {
+      background: rgba(139, 92, 246, .12)
+    }
+
+    .btn-nav {
+      padding: 8px 20px;
+      font-size: .85rem
+    }
+
+    @media(max-width:760px) {
+      .navlinks {
+        display: none
+      }
+    }
+
+    /* HERO */
+    .hero {
+      padding: 90px 0 70px;
+      text-align: center;
+      background: radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, .22), transparent 65%)
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: rgba(139, 92, 246, .15);
+      border: 1px solid var(--purple);
+      color: var(--purple2);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: .85rem;
+      margin-bottom: 22px
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 16px
+    }
+
+    .hero h1 .grad {
+      background: linear-gradient(135deg, var(--purple2), var(--pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.12rem;
+      max-width: 640px;
+      margin: 0 auto 30px
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 44px
+    }
+
+    .stats {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 30px;
+      min-width: 150px
+    }
+
+    .stat b {
+      font-size: 1.6rem;
+      display: block;
+      color: var(--purple2)
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .85rem
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 70px 0
+    }
+
+    .sec-head {
+      text-align: center;
+      margin-bottom: 44px
+    }
+
+    .sec-head h2 {
+      font-size: 2rem;
+      margin-bottom: 10px
+    }
+
+    .sec-head p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto
+    }
+
+    /* PROFILES */
+    .profiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px
+    }
+
+    .profile {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 34px 26px;
+      text-align: center;
+      transition: .2s
+    }
+
+    .profile:hover {
+      transform: translateY(-4px);
+      border-color: var(--purple)
+    }
+
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800
+    }
+
+    .profile-shot {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 16px;
+      border: 1px solid var(--line)
+    }
+
+    .cthumb {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block
+    }
+
+    .viewcount {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, .65);
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 50px
+    }
+
+    .thumbwrap {
+      position: relative
+    }
+
+    .profile h3 {
+      margin-bottom: 4px
+    }
+
+    .profile .handle {
+      color: var(--purple2);
+      font-size: .92rem;
+      margin-bottom: 10px;
+      display: block
+    }
+
+    .profile p {
+      color: var(--muted);
+      font-size: .92rem;
+      margin-bottom: 20px
+    }
+
+    /* VIDEOS */
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px
+    }
+
+    .video-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: .2s
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--purple)
+    }
+
+    .thumb {
+      aspect-ratio: 9/12;
+      background: linear-gradient(160deg, #241b4d, #3b1d5e 60%, #5c1a4d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.4rem
+    }
+
+    .video-card .info {
+      padding: 18px
+    }
+
+    .video-card .info h4 {
+      margin-bottom: 6px;
+      font-size: 1rem
+    }
+
+    .video-card .info p {
+      color: var(--muted);
+      font-size: .88rem;
+      margin-bottom: 14px
+    }
+
+    .video-card .info a:not(.btn) {
+      color: var(--purple2);
+      font-weight: 700;
+      font-size: .9rem
+    }
+
+
+    /* PRODUCTS */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      align-items: stretch
+    }
+
+    .product {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 34px 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: .2s
+    }
+
+    .product:hover {
+      transform: translateY(-4px)
+    }
+
+    .product.featured {
+      border: 2px solid var(--purple);
+      box-shadow: 0 0 40px rgba(139, 92, 246, .18)
+    }
+
+    .tag {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 800;
+      padding: 5px 18px;
+      border-radius: 50px;
+      letter-spacing: 1px
+    }
+
+    .product h3 {
+      font-size: 1.35rem;
+      margin-bottom: 6px
+    }
+
+    .price {
+      font-size: 2.4rem;
+      font-weight: 900;
+      margin: 10px 0 4px
+    }
+
+    .price small {
+      font-size: .95rem;
+      color: var(--muted);
+      font-weight: 400
+    }
+
+    .product ul {
+      list-style: none;
+      margin: 18px 0 26px;
+      flex: 1
+    }
+
+    .product ul li {
+      padding: 8px 0;
+      color: var(--muted);
+      font-size: .94rem;
+      border-bottom: 1px dashed var(--line)
+    }
+
+    .product ul li:last-child {
+      border: none
+    }
+
+    .product ul li::before {
+      content: "\2713 ";
+      color: var(--green);
+      font-weight: 800
+    }
+
+    .product .btn {
+      text-align: center
+    }
+
+    .trust {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: .88rem
+    }
+
+    .trust span {
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      padding: 8px 18px;
+      border-radius: 50px
+    }
+
+    /* PAYMENT */
+    .payline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin: 10px 0
+    }
+
+    .paynum {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 2px
+    }
+
+    .copybtn {
+      background: rgba(139, 92, 246, .15);
+      border: 1px solid var(--purple);
+      color: var(--purple2);
+      border-radius: 50px;
+      padding: 6px 18px;
+      font-size: .82rem;
+      font-weight: 700;
+      cursor: pointer
+    }
+
+    .copybtn:hover {
+      background: rgba(139, 92, 246, .3)
+    }
+
+    .paysteps {
+      max-width: 760px;
+      margin: 30px auto 0;
+      display: grid;
+      gap: 12px
+    }
+
+    .paysteps div {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 20px;
+      font-size: .94rem;
+      color: var(--muted)
+    }
+
+    .paysteps b {
+      color: var(--purple2)
+    }
+
+    .pack-upsell {
+      margin-top: 18px;
+      background: rgba(34, 197, 94, .08);
+      border: 1px solid var(--green);
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: none
+    }
+
+    .pack-upsell p {
+      font-size: .94rem;
+      margin-bottom: 12px
+    }
+
+    .pack-upsell p b {
+      color: var(--green)
+    }
+
+    /* FAQ */
+    .faq {
+      max-width: 760px;
+      margin: 0 auto
+    }
+
+    .faq details {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      padding: 18px 22px
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 700
+    }
+
+    .faq p {
+      color: var(--muted);
+      margin-top: 10px;
+      font-size: .94rem
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 44px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem
+    }
+
+    footer .flinks {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap
+    }
+
+    footer .flinks a:hover {
+      color: #fff
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="wrap">
+      <a class="logo" href="#top"><span class="mb">MIAN</span> BROTHERS</a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#videos">Videos</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Prompt Packs</a>
+        <a href="#payment">Payment</a>
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="btn btn-primary btn-nav" href="#products">Get Started</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="badge">AI VIDEO CREATORS</div>
+      <h1>Learn to Create <span class="grad">Viral AI Videos</span> Like Ours</h1>
+      <p>We are two brothers making AI videos that millions watch. Now we are sharing our exact prompts, tools and
+        step-by-step workflow so you can do it too.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#products">View Our Products</a>
+        <a class="btn btn-ghost" href="#categories">Browse Prompt Packs</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>280K+</b><span>Followers</span></div>
+        <div class="stat"><b>282M+</b><span>Views in 30 Days</span></div>
+        <div class="stat"><b>2</b><span>Digital Products</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Meet the Mian Brothers</h2>
+        <p>Three creators, one mission: making AI videos that people love to watch and share.</p>
+      </div>
+      <div class="profiles">
+        <div class="profile">
+          <img class="profile-shot" src="images/profile-umair-header.png" alt="@umair_ai_3 Instagram profile">
+          <h3>Umair</h3>
+          <a class="handle" href="https://www.instagram.com/umair_ai_3/" target="_blank" rel="noopener">@umair_ai_3</a>
+          <p>280K+ followers and 282.7M views in the last 30 days. The main creator behind our most viral AI video
+            series.</p>
+          <a class="btn btn-ghost" href="https://www.instagram.com/umair_ai_3/" target="_blank" rel="noopener">Follow on
+            Instagram</a>
+        </div>
+        <div class="profile">
+          <img class="profile-shot" src="images/profile-haider-header.png" alt="@haider_ai_0 Instagram profile">
+          <h3>Haider</h3>
+          <a class="handle" href="https://www.instagram.com/haider_ai_0/" target="_blank"
+            rel="noopener">@haider_ai_0</a>
+          <p>A fast-growing AI video page with 1.5M views in the last 30 days, fresh daily content and new experiments.
+          </p>
+          <a class="btn btn-ghost" href="https://www.instagram.com/haider_ai_0/" target="_blank" rel="noopener">Follow
+            on Instagram</a>
+        </div>
+        <div class="profile">
+          <img class="profile-shot" src="images/profile-badri-header.png" alt="@ibadri_ai Instagram profile">
+          <h3>Badri</h3>
+          <a class="handle" href="https://www.instagram.com/ibadri_ai" target="_blank" rel="noopener">@ibadri_ai</a>
+          <p>1,229 followers. AI Art, Visuals and Creativity, where AI meets imagination.</p>
+          <a class="btn btn-ghost" href="https://www.instagram.com/ibadri_ai" target="_blank" rel="noopener">Follow on
+            Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos" style="background:var(--bg2)">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Our Videos</h2>
+        <p>A taste of what we create. Every video below was made with the same prompts and workflow we sell.</p>
+      </div>
+      <div class="videos">
+        <div class="video-card">
+          <div class="thumbwrap"><img class="cthumb" src="images/v-honey-merged.png" alt="Honey harvesting videos"><span
+              class="viewcount">24.2M views</span></div>
+          <div class="info">
+            <h4>Honey Harvesting</h4>
+            <p>Our most viral series: giant honeycombs harvested from caves, cliffs and waterfalls.</p>
+            <a href="https://www.instagram.com/umair_ai_3/" target="_blank" rel="noopener">Watch on Instagram &rarr;</a>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="thumbwrap"><img class="cthumb" src="images/v-goat-181m.png" alt="Goat feeding video"><span
+              class="viewcount">181M views</span></div>
+          <div class="info">
+            <h4>Goat and Sheep Farm</h4>
+            <p>Cute farm life: goats, sheep and lambs feeding together and drinking milk from bottles.</p>
+            <a href="https://www.instagram.com/umair_ai_3/" target="_blank" rel="noopener">Watch on Instagram &rarr;</a>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="thumbwrap"><img class="cthumb" src="images/v-catvendor-fries.png"
+              alt="Cat food vendor video"><span class="viewcount">1M+ views</span></div>
+          <div class="info">
+            <h4>Cat Food Vendor</h4>
+            <p>A fluffy cat running street food carts: fries, chaat, pizza, hotdogs, tacos and more.</p>
+            <a href="https://www.instagram.com/haider_ai_0/" target="_blank" rel="noopener">Watch on Instagram
+              &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Our Products</h2>
+        <p>Pick your path: the complete course, or the affordable prompt pack to start fast.</p>
+      </div>
+      <div class="products">
+        <div class="product featured">
+          <div class="tag">MOST COMPLETE</div>
+          <h3>Master Video Prompt Bundle</h3>
+          <div class="price">$29 <small>one-time payment</small></div>
+          <ul>
+            <li>Complete master video prompt collection</li>
+            <li>Our 30-second Dola video making extension</li>
+            <li>Paid WhatsApp guidance group access</li>
+            <li>Learn our full workflow step by step</li>
+            <li>We deliver everything personally on WhatsApp</li>
+          </ul>
+          <a class="btn btn-primary"
+            href="https://wa.me/923286856944?text=Hi%20Mian%20Brothers%2C%20I%20want%20the%20Master%20Video%20Prompt%20Bundle%20%28%2429%29."
+            target="_blank" rel="noopener">Order on WhatsApp - $29</a>
+          <p style="margin-top:10px;font-size:.85rem;color:var(--muted)">Paying manually? See <a href="#payment"
+              style="color:var(--purple2);font-weight:700">payment methods</a>.</p>
+        </div>
+        <div class="product">
+          <div class="tag" style="background:var(--green)">BEST VALUE</div>
+          <h3>Prompt Packs by Category</h3>
+          <div class="price">$7 <small>per pack</small></div>
+          <ul>
+            <li>One pack per video style we post</li>
+            <li>Copy-paste prompts that actually work</li>
+            <li>Posting titles + hashtags included</li>
+            <li>We send your pack personally on WhatsApp</li>
+            <li>Our 30-second Dola video making extension</li>
+          </ul>
+          <a class="btn btn-primary" href="#categories">Browse Categories</a>
+        </div>
+      </div>
+      <div class="trust">
+        <span>Pay easily: mobile wallet or Binance</span>
+        <span>Personal delivery on WhatsApp</span>
+        <span>Made by creators with 280K+ followers</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Prompt Packs by Category</h2>
+        <p>Every pack is built from a real series on our Instagram pages. $7 each. Order on WhatsApp and we send your
+          pack personally after payment.</p>
+      </div>
+      <div class="videos">
+        <!--
+        WHATSAPP NUMBER: replace 923286856944 in every wa.me link below
+        with your WhatsApp business number (international format, no +).
+      -->
+        <div class="video-card">
+          <div class="thumbwrap"><img class="cthumb" src="images/v-honey-merged.png" alt="Honey harvesting result"><span
+              class="viewcount">24.2M views</span></div>
+          <div class="info">
+            <h4>Honey Harvesting Prompts</h4>
+            <p>Our most viral series from @umair_ai_3: a strong harvester collecting giant honeycombs inside caves, on
+              cliffs and by waterfalls.</p>
+            <p style="color:var(--green);font-weight:800;margin-bottom:12px">$7</p>
+            <a class="btn btn-primary "
+              href="https://wa.me/923286856944?text=Hi%20Mian%20Brothers%2C%20I%20want%20the%20Honey%20Harvesting%20Prompt%20Pack%20%28%247%29."
+              target="_blank" rel="noopener">Order on WhatsApp</a>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="thumbwrap"><img class="cthumb" src="images/v-goat-44m.png" alt="Goat feeding result"><span
+              class="viewcount">44.6M views</span></div>
+          <div class="info">
+            <h4>Goat and Sheep Feeding Prompts</h4>
+            <p>Cute farm videos from both our pages: goats, sheep and lambs feeding together in the barn and drinking
+              milk from bottles.</p>
+            <p style="color:var(--green);font-weight:800;margin-bottom:12px">$7</p>
+            <a class="btn btn-primary "
+              href="https://wa.me/923286856944?text=Hi%20Mian%20Brothers%2C%20I%20want%20the%20Goat%20and%20Sheep%20Feeding%20Prompt%20Pack%20%28%247%29."
+              target="_blank" rel="noopener">Order on WhatsApp</a>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="thumbwrap"><img class="cthumb" src="images/v-catvendor-shawarma.png"
+              alt="Cat food vendor result"><span class="viewcount">1M+ views</span></div>
+          <div class="info">
+            <h4>Cat Food Vendor Prompts</h4>
+            <p>The star series of @haider_ai_0: a fluffy cat running street food carts, selling fries, chaat, pizza,
+              hotdogs, tacos and more.</p>
+            <p style="color:var(--green);font-weight:800;margin-bottom:12px">$7</p>
+            <a class="btn btn-primary "
+              href="https://wa.me/923286856944?text=Hi%20Mian%20Brothers%2C%20I%20want%20the%20Cat%20Food%20Vendor%20Prompt%20Pack%20%28%247%29."
+              target="_blank" rel="noopener">Order on WhatsApp</a>
+          </div>
+        </div>
+
+
+      </div>
+      <p style="text-align:center;color:var(--muted);margin-top:26px;font-size:.92rem">Every pack includes copy-paste
+        master prompts, negative prompts, posting titles and hashtags.<br>Pay with Easypaisa, JazzCash, Sadapay, NayaPay
+        or Binance Pay, then send your screenshot on WhatsApp.</p>
+    </div>
+  </section>
+
+  <section id="payment">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>How to Pay</h2>
+        <p>No card? No problem. Pay manually, send your screenshot on WhatsApp, and we deliver your product after
+          verification.</p>
+      </div>
+      <div class="products">
+        <div class="product">
+          <h3>For Pakistan - Mobile Wallets</h3>
+          <p style="color:var(--muted);font-size:.92rem;margin:8px 0">Easypaisa &middot; Sadapay &middot; NayaPay</p>
+          <div class="payline"><span class="paynum">03288811588</span><button class="copybtn"
+              onclick="copyText('03288811588',this)">Copy</button></div>
+          <div class="payline"><span class="paynum">03287390683</span><button class="copybtn"
+              onclick="copyText('03287390683',this)">Copy</button></div>
+          <p style="color:var(--muted);font-size:.88rem;margin-top:12px">Account titles: Mian Muhammad Ummair, Muhammad
+            Haider Ijaz</p>
+        </div>
+        <div class="product">
+          <h3>For International - Binance Pay</h3>
+          <p style="color:var(--muted);font-size:.92rem;margin:8px 0">Send via Binance Pay to either UID</p>
+          <div class="payline"><span class="paynum">1276842368</span><button class="copybtn"
+              onclick="copyText('1276842368',this)">Copy</button></div>
+          <div class="payline"><span class="paynum">837040646</span><button class="copybtn"
+              onclick="copyText('837040646',this)">Copy</button></div>
+          <p style="color:var(--muted);font-size:.88rem;margin-top:12px">Binance nicknames: Mian Muhammad Ummair,
+            M_Haider_Ijaz</p>
+        </div>
+      </div>
+      <div class="paysteps">
+        <div><b>1.</b> Send your payment to a number or UID above.</div>
+        <div><b>2.</b> Tap <b>Order on WhatsApp</b> and send your payment screenshot with the transaction ID.</div>
+        <div><b>3.</b> We verify the payment and send your download link, usually within 30 minutes.</div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Contact Us</h2>
+        <p>Questions about a pack, payment, or anything else? Reach us directly.</p>
+      </div>
+      <div class="hero-cta" style="margin-bottom:0">
+        <a class="btn btn-primary"
+          href="https://wa.me/923286856944?text=Hi%20Mian%20Brothers%2C%20I%20have%20a%20question." target="_blank"
+          rel="noopener">DM on WhatsApp</a>
+        <a class="btn btn-ghost" href="https://whatsapp.com/channel/0029Vb846Iz297525a0y9H3U" target="_blank"
+          rel="noopener">WhatsApp Channel</a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/profile.php?id=100009456283159" target="_blank"
+          rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>How do I receive my purchase?</summary>
+          <p>Pay with Easypaisa, JazzCash, Sadapay, NayaPay or Binance Pay, then send your payment screenshot on
+            WhatsApp. We verify it and send your download link personally, usually within 30 minutes.</p>
+        </details>
+        <details>
+          <summary>Do I need paid AI tools to use the prompts?</summary>
+          <p>No. The prompts work with popular AI video tools, including free tiers. The masterclass shows you free and
+            paid options for every step.</p>
+        </details>
+        <details>
+          <summary>What is the difference between the $29 bundle and the $7 pack?</summary>
+          <p>The $29 Master Video Prompt Bundle is everything: the complete prompt collection, our 30-second Dola video
+            making extension, and access to the paid WhatsApp guidance group. The $7 pack is a shortcut for one
+            category: ready-to-use prompts with titles and hashtags so you can start posting today.</p>
+        </details>
+        <details>
+          <summary>Can I really make money with AI videos?</summary>
+          <p>Many creators earn from views, brand deals and selling digital products like this one. We share what worked
+            for us, but results depend on your consistency and effort.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="flinks">
+        <a href="https://www.instagram.com/umair_ai_3/" target="_blank" rel="noopener">Instagram: @umair_ai_3</a>
+        <a href="https://www.instagram.com/haider_ai_0/" target="_blank" rel="noopener">Instagram: @haider_ai_0</a>
+        <a href="https://www.instagram.com/ibadri_ai/" target="_blank" rel="noopener">Instagram: @ibadri_ai</a>
+
+      </div>
+      <div style="margin-bottom:18px">
+        <a class="btn btn-ghost btn-nav"
+          href="https://wa.me/923286856944?text=Hi%20Mian%20Brothers%2C%20I%20have%20a%20question." target="_blank"
+          rel="noopener">Questions? DM Us on WhatsApp</a>
+      </div>
+      <p>&copy; 2026 Mian Brothers. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyText(text, btn) {
+      function done() { var old = btn.textContent; btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = old; }, 1500); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) { }
+        document.body.removeChild(ta);
+      }
+    }
+
+  </script>
+</body>
+
+</html>
